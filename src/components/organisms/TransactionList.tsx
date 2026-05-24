@@ -1,6 +1,6 @@
-import { View, FlatList, ActivityIndicator } from 'react-native';
-import { Transaction } from '@/types/transaction';
-import { TransactionItem } from '@/components/molecules/TransactionItem';
+import { TransactionItem } from "@/components/molecules/TransactionItem";
+import { Transaction } from "@/types/transaction";
+import { ActivityIndicator, FlatList, View } from "react-native";
 
 interface TransactionListProps {
   transactions: Transaction[];
@@ -15,7 +15,7 @@ export function TransactionList({
 }: TransactionListProps) {
   if (isLoading) {
     return (
-      <View className="flex-1 justify-center items-center">
+      <View className="flex-1 justify-center items-center py-8">
         <ActivityIndicator size="large" color="#C8102E" />
       </View>
     );
@@ -28,8 +28,15 @@ export function TransactionList({
         <TransactionItem transaction={item} onPress={onTransactionPress} />
       )}
       keyExtractor={(item) => item.refId}
-      scrollEnabled={false}
-      contentContainerStyle={{ paddingHorizontal: 16 }}
+      // Allow native scrolling inside the page scroll
+      scrollEnabled={true}
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{
+        paddingHorizontal: 16,
+        paddingBottom: 32,
+        gap: 8,
+      }}
+      ItemSeparatorComponent={() => <></>}
     />
   );
 }
