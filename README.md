@@ -129,7 +129,13 @@ The app uses a bottom tab bar with three main sections:
 - **Explore**: Banking services and features
 - **Transactions**: Complete transaction history and details
 
-## � Screenshots
+## Screenshots
+<img width="257" height="421" alt="image" src="https://github.com/user-attachments/assets/d6230cdf-9bbb-4139-a207-43228ebb4a41" />
+
+<img width="202" height="430" alt="image" src="https://github.com/user-attachments/assets/789a24e1-12f8-46df-9cd1-e55f335fbc9c" />
+
+<img width="194" height="427" alt="image" src="https://github.com/user-attachments/assets/28c98358-faa3-42a9-b141-76fdf352d7fb" />
+
 
 ## 🛠️ Tech Stack
 
